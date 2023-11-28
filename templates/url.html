@@ -1,0 +1,39 @@
+{% extends 'base.html' %} 
+{% block nav %}
+<li class="nav-item">
+  <a class="nav-link " aria-current="page" href="index">ABOUT US</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link active" aria-current="page" href="summary_url"
+    >URL SUMMARIZER</a
+  >
+</li>
+<li class="nav-item">
+  <a class="nav-link " aria-current="page" href="summary_doc"
+    >DOCUMENT SUMMARIZER</a
+  >
+</li>
+<li class="nav-item">
+  <a class="nav-link " aria-current="page" href="summary_text"
+    >TEXT SUMMARIZER</a
+  >
+</li>
+{%endblock nav%}
+
+{% block content %} 
+
+    <form action="/url_action_page" method = "POST">{% csrf_token %}
+        <div class="form-group">
+        <div class ="textfeild">
+        <label for="urlinput"><b class= "text"> <h4>URL INPUT: </h4> <b></label>
+            <textarea id="urlinput" name="urlinput" rows="1" cols="100"> ENTER YOUR URL HERE
+            </textarea><br><br>
+          <label for="vol">  <h4>CON LENGTH: </h4></label>
+            <input type="range" id="vol" name="vol" min="0" max="2"> 
+           {% comment %} <div style="text-indent:30em">  <button type="button" class="btn btn-warning" >SUBMIT</button>  {% endcomment %}
+           <div style="text-indent:30em">  <button type="button" class="btn btn-warning" > <input type="submit"> </div>
+        </div>
+        </div>
+    </form>
+
+{% endblock content %}

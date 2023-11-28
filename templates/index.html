@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block nav %}
+<li class="nav-item">
+  <a class="nav-link" aria-current="page" href="index">ABOUT US</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" aria-current="page" href="summary_url">URL SUMMARIZER</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" aria-current="page" href="summary_doc"
+    >DOCUMENT SUMMARIZER</a
+  >
+</li>
+<li class="nav-item">
+  <a class="nav-link" aria-current="page" href="summary_text"
+    >TEXT SUMMARIZER</a
+  >
+</li>
+{%endblock nav%} {% block content %}
+<div class="textfeild1">
+  <b class="text"
+    ><center><h1>Welcome to the Text Summarizer</h1></center></b
+  >
+  <b class="Summarizer">
+    <center><h3>Choose one out of Text / URL / Document</h3></center></b
+  >
+</div>
+
+{% endblock content %}

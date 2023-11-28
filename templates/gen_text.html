@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block nav %}
+<li class="nav-item">
+  <a class="nav-link active" aria-current="page" href="index">ABOUT US</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link active" aria-current="page" href="summary_url"
+    >URL SUMMARIZER</a
+  >
+</li>
+<li class="nav-item">
+  <a class="nav-link active" aria-current="page" href="summary_doc"
+    >DOCUMENT SUMMARIZER</a
+  >
+</li>
+<li class="nav-item">
+  <a class="nav-link active" aria-current="page" href="summary_text"
+    >TEXT SUMMARIZER</a
+  >
+</li>
+{%endblock nav%}
+{% block content %} 
+
+<div class = "text1"><b><h2>ORIGINAL TEXT :</h2></b>
+<p1>{{text}}<p1>
+</div>
+<br>
+<br>
+<div class = "Summarizer1"><h2>SUMMARY TEXT :</h2>
+<p1>{{text_sum}}<p1>
+</div>
+
+
+{% endblock content %}
